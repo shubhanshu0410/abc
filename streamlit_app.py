@@ -5,9 +5,9 @@ import pandas as pd
 
 # Load the trained pipeline (scaler + model)
 try:
-    pipeline = joblib.load("delivery_delay_pipeline.sav")
+    pipeline = joblib.load("delivery_delay.sav")
 except FileNotFoundError:
-    st.error("Error: 'delivery_delay_pipeline.sav' not found. Please ensure the model is saved correctly and is in the same directory.")
+    st.error("Error: 'delivery_delay.sav' not found. Please ensure the model is saved correctly and is in the same directory.")
     st.stop()
 
 st.set_page_config(page_title="Delivery Delay Prediction")
